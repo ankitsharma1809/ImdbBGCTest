@@ -1,0 +1,21 @@
+Important :- Before running remember pass data file paths to loadData function of Data.scala file.
+
+To build the project run :- sbt clean compile 
+To create a fat jar using sbt run command :- sbt assembly
+
+Instructions for run :- 
+	ViewData.scala is the main runnable class which needs following parameters :-
+		  --view [metrics] --numerOfItems [n]  
+    For more check with 'help' option as :- ViewData --help
+    
+Usage: ViewData [options]
+
+  --view <value>          Results to view
+  --numerOfItems <value>  Number of movies to view
+  --help                  Run example: View --view [metrics] --numerOfItems [n]
+    Value of 'metrics' parameter can be one of these -
+    TopMovies             - show top n movies with a minimum of 50 votes with ranking.
+    MostCreditedPerson    - list the persons who are most often credited for top n movies.
+    AllKnownTitles        - list the different titles of the top n movies.
+    
+    Value of 'n' is optional, by default it will show 20 items.
